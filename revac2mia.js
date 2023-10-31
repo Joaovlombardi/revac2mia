@@ -54,7 +54,12 @@ app.post("/cadastropessoa", async(req, res)=>{
         res.status(400).json((error))
     }
 })
+//rota para get de cadastro
+app.get("/cadastropessoa.html", async (req,res)=>{
+    res.sendFile(__dirname + "/cadastropessoa.html")
+})
 
+//rota raiz -inw
 app.get("/", async (req,res)=>{
     res.sendFile(__dirname + "/index.html")
 })
